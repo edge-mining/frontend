@@ -43,7 +43,7 @@
 <script setup lang="ts">
 import { ref, watch } from 'vue';
 import { usePolicyStore } from '@/stores/policies';
-import type { RuleFormData } from '@/types';
+import type { RuleFormData } from '@/types/policy';
 
 const props = defineProps<{
     policyId: string;

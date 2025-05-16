@@ -59,7 +59,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue';
-import type { OptimizationPolicy } from '@/types';
+import type { OptimizationPolicy } from '@/types/policy';
 import { usePolicyStore } from '@/stores/policies';
 
 defineProps<{

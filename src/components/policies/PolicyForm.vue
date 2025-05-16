@@ -37,7 +37,7 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue';
 import { usePolicyStore } from '@/stores/policies';
-import type { PolicyFormData } from '@/types';
+import type { PolicyFormData } from '@/types/policy';
 
 const emit = defineEmits(['policy-created', 'cancel']);
 
