@@ -1,25 +1,14 @@
-import './assets/main.css'
+import { createApp } from "vue";
+import "@fontsource/plus-jakarta-sans/400.css";
+import "@fontsource/plus-jakarta-sans/500.css";
+import "@fontsource/plus-jakarta-sans/600.css";
+import "@fontsource/plus-jakarta-sans/700.css";
+import "./style.css";
+import App from "./App.vue";
+import router from "./router";
+import { useAppStore } from "./core/stores/appStore";
+import { createPinia } from "pinia";
 
-// Import Swiper styles
-import 'swiper/css'
-import 'swiper/css/navigation'
-import 'swiper/css/pagination'
-import 'jsvectormap/dist/jsvectormap.css'
-import 'flatpickr/dist/flatpickr.css'
+createApp(App).use(router).use(createPinia()).mount("#app");
 
-import { createApp } from 'vue'
-import { createPinia } from 'pinia' // Import Pinia
-
-import App from './App.vue'
-import router from './router'
-
-import VueApexCharts from 'vue3-apexcharts'
-
-const pinia = createPinia()
-const app = createApp(App)
-
-app.use(pinia)
-app.use(router)
-app.use(VueApexCharts)
-
-app.mount('#app')
+useAppStore(); // Initialize the AppStore
